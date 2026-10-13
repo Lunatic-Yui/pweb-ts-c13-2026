@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ambil Antrian - Rumah Sakit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-checking">
+  <header class="app-header">
+    <div>
+      <h1>Ambil nomor antrian</h1>
+      <p class="muted">Pilih jenis layanan untuk mengambil nomor antrian.</p>
+    </div>
+    <nav class="header-actions">
+      <a class="btn btn-sm staff-only" href="index.html">Dashboard</a>
+      <a class="btn btn-sm staff-only" href="operator.html">Operator</a>
+      <a class="btn btn-sm" href="layar.html">Layar Antrian</a>
+      <a class="btn btn-sm btn-dark" href="ambil-antrian.html">Ambil Nomor</a>
+      <div id="userBar" class="user-bar"></div>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="result" class="result card" hidden aria-live="polite"></section>
+    <div id="pickGrid" class="pick-grid"></div>
+    <section class="card history-card">
+      <h2>Riwayat tiket saya</h2>
+      <div id="history" class="ticket-groups"></div>
+    </section>
+    <p class="muted small">Jenis antrian baru muncul otomatis. Data <span id="clock">--.--.--</span></p>
+  </main>
+  <script src="dist/common.js" defer></script>
+  <script src="dist/ambil.js" defer></script>
+</body>
+</html>

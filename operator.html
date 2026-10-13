@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panel Operator - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-checking">
+  <header class="app-header">
+    <div>
+      <h1>Panel Operator</h1>
+      <p class="muted">Panggil tiket sesuai prioritas. Layar antrian akan ikut diperbarui.</p>
+    </div>
+    <div class="header-actions">
+      <a class="btn btn-sm" href="index.html">Dashboard</a>
+      <a class="btn btn-sm" href="ambil-antrian.html">Ambil Nomor</a>
+      <a class="btn btn-sm" href="layar.html" target="_blank" rel="noopener">Layar</a>
+      <div id="userBar" class="user-bar"></div>
+    </div>
+  </header>
+  <main class="container">
+    <div id="opGrid" class="op-grid"></div>
+  </main>
+  <script src="dist/common.js" defer></script>
+  <script src="dist/operator.js" defer></script>
+</body>
+</html>

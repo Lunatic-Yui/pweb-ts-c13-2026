@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard Admin - Antrian Rumah Sakit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-checking">
+  <header class="app-header">
+    <div>
+      <h1>Dashboard Admin</h1>
+      <p class="muted">Reset setiap hari agar penomoran antrian mulai dari awal.</p>
+    </div>
+    <div class="header-actions">
+      <a class="btn btn-sm" href="operator.html">Operator</a>
+      <a class="btn btn-sm" href="ambil-antrian.html">Ambil Nomor</a>
+      <a class="btn btn-sm" href="layar.html" target="_blank" rel="noopener">Layar</a>
+      <button id="resetBtn" class="btn btn-sm btn-danger-outline">Reset Antrian</button>
+      <div id="userBar" class="user-bar"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card stats-card">
+      <h2>Statistik hari ini</h2>
+      <div id="stats" class="stats-grid"></div>
+    </section>
+  </main>
+
+  <main class="container two-col">
+    <section class="card">
+      <h2>Jenis antrian</h2>
+      <form id="typeForm" class="inline-form" novalidate>
+        <div class="field narrow">
+          <label for="typeCode">Kode</label>
+          <input id="typeCode" maxlength="1" placeholder="C" autocomplete="off">
+        </div>
+        <div class="field grow">
+          <label for="typeName">Nama</label>
+          <input id="typeName" placeholder="Contoh: Farmasi" autocomplete="off">
+        </div>
+        <button class="btn btn-dark" type="submit">Tambah</button>
+      </form>
+      <div id="typeError" class="error-box" role="alert" hidden></div>
+      <ul id="typeList" class="type-list"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Terbitkan tiket</h2>
+      <form id="issueForm" class="inline-form">
+        <div class="field grow">
+          <label for="issueType">Jenis antrian</label>
+          <select id="issueType"></select>
+        </div>
+        <div class="field">
+          <label for="issuePriority">Prioritas</label>
+          <select id="issuePriority">
+            <option value="normal">Normal</option>
+            <option value="lansia">Lansia</option>
+            <option value="disabilitas">Disabilitas</option>
+            <option value="vip">VIP</option>
+          </select>
+        </div>
+        <button id="issueBtn" class="btn btn-dark" type="submit">Terbitkan</button>
+      </form>
+      <div id="ticketList" class="ticket-groups"></div>
+    </section>
+  </main>
+
+  <script src="dist/common.js" defer></script>
+  <script src="dist/admin.js" defer></script>
+</body>
+</html>

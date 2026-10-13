@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layar Antrian - Rumah Sakit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-checking">
+  <header class="app-header">
+    <div>
+      <h1>Nomor sedang dipanggil</h1>
+      <p class="muted small">Diperbarui <span id="clock">--.--.--</span></p>
+    </div>
+    <nav class="header-actions">
+      <a class="btn btn-sm staff-only" href="index.html">Dashboard</a>
+      <a class="btn btn-sm staff-only" href="operator.html">Operator</a>
+      <a class="btn btn-sm btn-dark" href="layar.html">Layar Antrian</a>
+      <a class="btn btn-sm" href="ambil-antrian.html">Ambil Nomor</a>
+      <button id="soundBtn" class="btn btn-sm">🔇 Suara: Mati</button>
+      <button id="fsBtn" class="btn btn-sm">Layar Penuh</button>
+      <div id="userBar" class="user-bar"></div>
+    </nav>
+  </header>
+  <main class="container">
+    <div id="screenGrid" class="screen-grid"></div>
+  </main>
+  <script src="dist/common.js" defer></script>
+  <script src="dist/layar.js" defer></script>
+</body>
+</html>
